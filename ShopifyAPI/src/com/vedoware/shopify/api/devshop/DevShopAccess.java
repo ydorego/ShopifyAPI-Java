@@ -14,15 +14,15 @@ import com.google.api.client.util.Base64;
 
 public class DevShopAccess {
 
-	private static String API_KEY = "2856dd64bc6adfd4ba80942dc76e9de3";
-	private static String PASSWORD = "988bf7c149733eb98685fd95028078cd";
+	private static String API_KEY = "TBD";
+	private static String PASSWORD = "TBD";
 	
 	private static String myShop = 
 			"https://"
 			//+ API_KEY
 			//+ ":"
 			//+ PASSWORD
-			+ "vedo-software-shop.myshopify.com/admin";
+			+ "Your shop URL";
 	
 	static final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();
 	static final JsonFactory JSON_FACTORY = new JsonFactory();

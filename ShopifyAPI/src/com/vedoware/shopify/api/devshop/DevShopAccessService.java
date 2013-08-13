@@ -18,11 +18,11 @@ import com.vedoware.shopify.exceptions.ShopifyException;
 
 public class DevShopAccessService {
 
-	private static String API_KEY = "2856dd64bc6adfd4ba80942dc76e9de3";
-	private static String PASSWORD = "988bf7c149733eb98685fd95028078cd";
+	private static String API_KEY = "TBD";
+	private static String PASSWORD = "TBD";
 	
 	private static String baseShopUrl = 
-			"https://" + "vedo-software-shop.myshopify.com/admin";
+			"https://" + "Your shop URL";
 	
 	private static final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();	
 	private static HttpRequestFactory _requestFactory = null;
