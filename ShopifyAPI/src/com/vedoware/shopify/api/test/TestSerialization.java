@@ -9,7 +9,6 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.vedoware.shopify.api.Address;
-import com.vedoware.shopify.api.ApplicationCharge;
 import com.vedoware.shopify.api.customers.Customer;
 
 

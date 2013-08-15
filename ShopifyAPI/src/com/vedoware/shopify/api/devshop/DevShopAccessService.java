@@ -17,21 +17,19 @@ import com.vedoware.shopify.exceptions.ShopifyException;
 
 
 public class DevShopAccessService {
-
-	private static String API_KEY = "TBD";
-	private static String PASSWORD = "TBD";
-	
-	private static String baseShopUrl = 
-			"https://" + "Your shop URL";
 	
 	private static final HttpTransport HTTP_TRANSPORT = new NetHttpTransport();	
 	private static HttpRequestFactory _requestFactory = null;
 	private String encodedAuthentication = null;	
 	private final String apiKey;
+	private final String baseShopUrl; 
+	private final String password;
 	
-	public DevShopAccessService(String apiKey, String password, String shopAdminAddress) {
+	public DevShopAccessService(String shopAdminUrl, String apiKey, String password, String shopAdminAddress) {
 
+		this.baseShopUrl = shopAdminUrl;
 		this.apiKey = apiKey;
+		this.password = password;
 		
 		// Initial Request Factory
 		//
@@ -46,7 +44,7 @@ public class DevShopAccessService {
 		          }
 		        });
 		
-		String authStr = this.apiKey + ":" + PASSWORD;
+		String authStr = this.apiKey + ":" + this.password;
 		encodedAuthentication = Base64.encodeBase64String(authStr.getBytes());
 	
 	}

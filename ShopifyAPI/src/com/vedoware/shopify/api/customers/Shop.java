@@ -39,6 +39,12 @@ public class Shop implements ShopifyResource {
 	@JsonProperty("email")
 	private String email;
 
+	@JsonProperty("eligible_for_payments")
+	private Boolean eligibleForPayments;
+	
+	@JsonProperty("requires_extra_payments_agreement")
+	private Boolean requiresExtraPaymentsAgreement;
+	
 	@JsonProperty("google_apps_domain")
 	private String googleAppsDomain;
 
