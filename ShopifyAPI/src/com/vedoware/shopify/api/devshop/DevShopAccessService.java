@@ -69,8 +69,7 @@ public class DevShopAccessService {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 			throw new ShopifyException(ex);
-		}
-		
+		}		
 	}
 
 	public String searchShopResource(String targetResource, List<Parameter> parameters) 
@@ -107,8 +106,7 @@ public class DevShopAccessService {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 			throw new ShopifyException(ex);
-		}
-		
+		}		
 	}
 	
 	public String createShopResource(String targetResource, List<Parameter> parameters, String resourcePayload) 
@@ -149,7 +147,7 @@ public class DevShopAccessService {
 		    //
 		    ByteArrayContent contentBytes = new ByteArrayContent(null, resourcePayload.getBytes());
 		    
-		    // Post Request
+		    // Put Request
 		    //
 		    HttpRequest request = _requestFactory.buildPutRequest(url, contentBytes);
 		    request.getHeaders().setContentType("application/json");
@@ -202,7 +200,7 @@ public class DevShopAccessService {
 		    //
 		    ByteArrayContent contentBytes = new ByteArrayContent(null, resourcePayload.getBytes());
 		    
-		    // Post Request
+		    // Patch Request
 		    //
 		    HttpRequest request = _requestFactory.buildPatchRequest(url, contentBytes);
 		    request.getHeaders().setContentType("application/json");

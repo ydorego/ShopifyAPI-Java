@@ -1,8 +1,10 @@
-package com.vedoware.shopify.api.test;
+package com.vedoware.shopify.test;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import org.junit.Test;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -11,11 +13,11 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.vedoware.shopify.api.Address;
 import com.vedoware.shopify.api.customers.Customer;
 
-
-public class TestSerialization {
-
-	public static void main(String[] args) {
-
+public class TestBasicSerialization extends BaseTestClass {
+	
+	@Test
+	public void test() {
+		
 		Customer customer = new Customer();
 		customer.setCreatedAt(new Date());
 		Address address = new Address();
