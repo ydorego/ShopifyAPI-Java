@@ -25,7 +25,7 @@ public class DevShopAccessService {
 	private final String baseShopUrl; 
 	private final String password;
 	
-	public DevShopAccessService(String shopAdminUrl, String apiKey, String password, String shopAdminAddress) {
+	public DevShopAccessService(String shopAdminUrl, String apiKey, String password) {
 
 		this.baseShopUrl = shopAdminUrl;
 		this.apiKey = apiKey;

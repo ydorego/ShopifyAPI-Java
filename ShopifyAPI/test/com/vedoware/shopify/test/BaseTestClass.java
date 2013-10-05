@@ -12,8 +12,8 @@ import com.vedoware.shopify.api.devshop.DevShopAccessService;
 public abstract class BaseTestClass {
 
 	private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SZ");
-	private static String API_KEY = "2856dd64bc6adfd4ba80942dc76e9de3";
-	private static String PASSWORD = "988bf7c149733eb98685fd95028078cd";
+	private static String API_KEY = "TBD";
+	private static String PASSWORD = "TBD";
 	
 	private static String baseShopUrl = 
 			"https://" + "vedo-software-shop.myshopify.com/admin";
@@ -25,7 +25,7 @@ public abstract class BaseTestClass {
 	@Before
 	public void setUp() throws Exception {
 		
-		devShopRef = new DevShopAccessService(API_KEY, PASSWORD, baseShopUrl);  		
+		devShopRef = new DevShopAccessService(baseShopUrl, API_KEY, PASSWORD);  		
 
 		// Handle the date format serialization specifically
 		//
